@@ -4,4 +4,4 @@ numpy==1.26.4
 werkzeug==3.0.1
 transformers==4.38.2
 torch==2.2.1 
-gunicorn=22.0.0
+gunicorn==22.0.0
