@@ -34,7 +34,7 @@ set_seed(42)
 
 @app.route('/')
 def hello_world():
-    return 'Hello, From Smart LLM!
+    return "Hello, From Smart LLM!"
 
 @app.route('/enhance_prompt', methods=['POST'])
 def enhance_prompt():
