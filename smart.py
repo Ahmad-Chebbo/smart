@@ -32,6 +32,10 @@ set_seed(42)
 # Load the text generation pipeline with GPT-2 (no API key required)
 # enhance_prompt_model = pipeline("text-generation", model="gpt2")
 
+@app.route('/')
+def hello_world():
+    return 'Hello, From Smart LLM!
+
 @app.route('/enhance_prompt', methods=['POST'])
 def enhance_prompt():
     """
@@ -59,7 +63,5 @@ def enhance_prompt():
     except Exception as e:
         logging.error(f"Error enhancing prompt: {str(e)}")
         return jsonify(error="Failed to enhance prompt"), 500
-
-
-if __name__ == '__main__':
-    app.run(debug=False, host='0.0.0.0', port=80)
+# if __name__ == '__main__':
+#     app.run(debug=False, host='0.0.0.0', port=80)
