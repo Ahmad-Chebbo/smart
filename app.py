@@ -1,15 +1,8 @@
-import os
-import io
 import logging
-import random
-from dotenv import load_dotenv
-from flask import Flask, request, send_file, jsonify, abort
-import numpy as np
-from werkzeug.utils import secure_filename
+from flask import Flask, request, jsonify
 from transformers import pipeline, set_seed
 
 app = Flask(__name__)
-load_dotenv()
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
